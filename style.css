@@ -1,0 +1,228 @@
+*{
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+*,*:before, *after{
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+:focus, :active{outline: none;}
+a:focus, a:active{outline: none}
+
+nav, footer, header, aside{display: block;}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+input, button, textarea { font-family: inherit;}
+
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner{padding: 0; border: 0;}
+a, a:visite{text-decoration: none}
+a:hover{text-decoration: none;}
+ul li {list-style: none;}
+img{vertical-align: top;}
+
+h1, h2, h3, h4, h5, h6 {font-size: inherit; font-weight: 400;}
+
+body {
+  overflow: hidden;
+  font-family: Rubik;
+  text-transform: uppercase;
+  background-color: black;
+}
+
+.bubbels{
+  position:absolute;
+  z-index:0;
+  width:100%;
+  height:100%;
+  overflow:hidden;
+  top:0;
+  left:0;
+}
+.bubble{
+  position:absolute;
+  bottom:0;
+  background: rgb(103, 206, 229);
+  border-radius:50%;
+  opacity:0.3;
+  animation: up 10s infinite ease-in;
+}
+.bubble:nth-child(1){
+  width:40px;
+  height:40px;
+  left:10%;
+  animation-duration:8s;
+}
+.bubble:nth-child(2){
+  width:20px;
+  height:20px;
+  left:20%;
+  animation-duration:5s;
+  animation-delay:1s;
+}
+.bubble:nth-child(3){
+  width:50px;
+  height:50px;
+  left:35%;
+  animation-duration:10s;
+  animation-delay:2s;
+}
+.bubble:nth-child(4){
+  width:80px;
+  height:80px;
+  left:50%;
+  animation-duration:7s;
+  animation-delay:0s;
+}
+.bubble:nth-child(5){
+  width:35px;
+  height:35px;
+  left:55%;
+  animation-duration:6s;
+  animation-delay:1s;
+}
+.bubble:nth-child(6){
+  width:45px;
+  height:45px;
+  left:65%;
+  animation-duration:8s;
+  animation-delay:3s;
+}
+.bubble:nth-child(7){
+  width:25px;
+  height:25px;
+  left:75%;
+  animation-duration:7s;
+  animation-delay:2s;
+}
+.bubble:nth-child(8){
+  width:80px;
+  height:80px;
+  left:80%;
+  animation-duration:6s;
+  animation-delay:1s;
+}
+.bubble:nth-child(9){
+  width:15px;
+  height:15px;
+  left:70%;
+  animation-duration:9s;
+  animation-delay:0s;
+}
+.bubble:nth-child(10){
+  width:50px;
+  height:50px;
+  left:85%;
+  animation-duration:5s;
+  animation-delay:3s;
+}
+@keyframes up{
+  0%{
+    bottom:-100px;
+    transform:translateX(0);
+  }76%{
+     transform:translateX(-210px);
+  }100%{
+    bottom:1000px;
+     transform:translateY(1000px);
+  }
+}
+
+.header {
+  padding-top: 140px;
+  font-weight: 400;
+  color: white;
+  text-align: center;
+  margin-bottom: 70px;
+}
+h1 {
+  font-size: 6em;
+  margin-bottom: 30px;
+}
+h2 {
+  font-size: 4em;
+}
+.watch_time{
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  border-radius: 80px;
+  border: 2px solid  rgb(28, 212, 212);
+  color: white;
+  font-size: 60px;
+  width: 350px;
+  height: 100px;
+  margin-bottom: 70px;
+}
+
+.watch_button {
+  margin: 0 auto;
+  display: flex;
+  color: white;
+  align-items: center;
+  justify-content: center; 
+  text-transform: uppercase;
+  width: 600px;
+  font-size: 30px;
+}
+
+.button_item {
+  margin-right: 50px;
+  width: 120px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  cursor: pointer;
+  position: relative;
+  }
+
+  .button_item:after {
+  content: '';
+  display: block;
+  position: absolute;
+    
+  transform-origin: right;
+  transform: scaleX(0);
+  top: 0;
+  height: 2px;
+  width: 100%;
+  background-color: rgb(28, 212, 212);
+  transition: transform 0.6s cubic-bezier(0.55, 0, 0.1, 1);
+  }
+
+  .button_item:before {
+    content: '';
+    display: block;
+    position: absolute;
+    transform-origin: left;
+    transform: scaleX(0);
+    bottom: 0;
+    height: 2px;
+    width: 100%;
+    background-color: rgb(28, 212, 212);
+    transition: transform 0.6s cubic-bezier(0.55, 0, 0.1, 1);
+  } 
+
+  .button_item:hover:after {
+    transform: scaleX(1);
+    transform-origin: left;
+    transition: transform 0.6s cubic-bezier(0.55, 0, 0.1, 1);
+  }
+  .button_item:hover:before {
+  transform: scaleX(1);
+  transform-origin: right;
+  transition: transform 0.6s cubic-bezier(0.55, 0, 0.1, 1);
+  }
